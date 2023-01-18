@@ -50,16 +50,17 @@ addFriendButton.addEventListener('click', () => {
     };
 
     // push it into the friends state array, passed in as an argument
-    newFriendName.push(friendData);
+    friendData.push(addFriendButton);
     // clear out the input element
     friendInputEl.value = '';
     // clear out and display all the friends (use a function here)
     friendsEl.textcontent = '';
-    for (let friend of friendData) {
-        const renderFriend = document.createElement('p');
-        renderFriend.textContent = friend;
-        friendsEl.append(renderFriend);
-    }
+    displayFriends();
+    // for (let friend of friendData) {
+    //     const renderFriend = document.createElement('p');
+    //     renderFriend.textContent = friend;
+    //     friendsEl.append(renderFriend);
+    // }
 });
 
 function displayFriends() {

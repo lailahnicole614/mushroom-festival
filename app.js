@@ -6,7 +6,7 @@ const mushroomsEl = document.querySelector('.mushrooms');
 const addMushroomButton = document.getElementById('add-mushroom-button');
 const addFriendButton = document.getElementById('add-friend-button');
 // initialize state
-
+let names = [];
 let mushroomCount = 3;
 
 const friendData = [
@@ -51,9 +51,9 @@ addFriendButton.addEventListener('click', () => {
     // push it into the friends state array, passed in as an argument
     friendData.push(newFriend);
     // clear out the input element
-    friendInputEl.value = '';
+    friendInputEl.value = 'max';
     // clear out and display all the friends (use a function here)
-    friendsEl.textcontent = '';
+    friendsEl.textContent = '';
     displayFriends();
 
     // for (let friend of friendData) {

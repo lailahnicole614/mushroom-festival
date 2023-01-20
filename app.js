@@ -46,7 +46,6 @@ addFriendButton.addEventListener('click', () => {
         name: newFriendName || Math.ceil(Math.random() * 30),
         satisfaction: 1,
     };
-    console.log(newFriend);
 
     // push it into the friends state array, passed in as an argument
     friendData.push(newFriend);
